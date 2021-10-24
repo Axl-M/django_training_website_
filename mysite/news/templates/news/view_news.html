@@ -18,6 +18,8 @@
           <div class="media">
               {% if news_item.photo %}
               <img src="{{ news_item.photo.url }}" alt="" class="float-md-start" width="250">
+              {% else %}
+                  <img src={% static '/img/no_images.jpg' %} alt="" class="float-md-start mr-3" width="250">
               {% endif %}
               <div class="media-body">
                     <h5 class="card-title">{{ news_item.title }}</h5>
