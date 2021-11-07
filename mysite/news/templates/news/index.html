@@ -14,7 +14,7 @@
         <div class="card mb-3">
           <div class="card-header">
 <!--                      {{ item.my_func }}-->
-<!--            Категория: <a href="{% url 'category' item.category.pk %}">{{ item.category.title }}</a>-->
+{#<!--            Категория: <a href="{% url 'category' item.category.pk %}">{{ item.category.title }}</a>-->#}
             Категория: <a href="{{ item.category.get_absolute_url }}">{{ item.category.title }}</a>
           </div>
           <div class="card-body">
@@ -35,7 +35,7 @@
               </div>
           </div>
           <div class="card-footer text-muted">
-              {{ item.created_at|date:"d-m-Y H:i" }}
+              {{ item.created_at|date:"d-m-Y H:i" }} Просмотров:
           </div>
         </div>
     {% endfor %}
