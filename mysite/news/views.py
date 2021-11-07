@@ -30,6 +30,7 @@ class HomeNews(ListView):
     # template_name = 'news/index.html'
     template_name = 'news/home_news_list.html'
     context_object_name = 'news'
+    paginate_by = 2
 
 # для добавления своих переменных
     def get_context_data(self, *, object_list=None, **kwargs):
@@ -56,6 +57,7 @@ class NewsByCategory(ListView):
     template_name = 'news/home_news_list.html'
     context_object_name = 'news'
     allow_empty = False
+    paginate_by = 2
 
     # фильтр
     def get_queryset(self):
