@@ -20,7 +20,7 @@ class NewsAdmin(admin.ModelAdmin):
         else:
             return "Нет Фото"
 
-    get_photo.short_description = "Миниатюра"
+    get_photo.short_description = "Предв.просмотр"
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ('id', 'title')

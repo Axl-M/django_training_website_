@@ -28,7 +28,7 @@
           </div>
       </div>
       <div class="card-footer text-muted">
-          {{ news_item.created_at|date:"d-m-Y H:i" }}
+          <p>Дата: {{ news_item.created_at|date:"d-m-Y H:i" }}</p>
       </div>
     </div>
 {% endblock %}

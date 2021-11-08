@@ -5,12 +5,12 @@ from django.urls import reverse
 class News(models.Model):
     title = models.CharField('Заголовок', max_length=150)
     content = models.TextField('контент', blank=True)
-    created_at = models.DateTimeField('Создана', auto_now_add=True)
-    updated_at = models.DateTimeField('отредактирована', auto_now=True)
+    created_at = models.DateTimeField('Дата создания', auto_now_add=True)
+    updated_at = models.DateTimeField('Дата изменения', auto_now=True)
     photo = models.ImageField('фото', upload_to='photos/%Y/%m/%d', blank=True)
-    is_published = models.BooleanField('опубликована', default=True)
+    is_published = models.BooleanField('опубликовать', default=True)
     category = models.ForeignKey('Category', on_delete=models.PROTECT, null=True, verbose_name='Категория')
-    views = models.IntegerField(default=0)
+    views = models.IntegerField(default=0, verbose_name='Просмотры')
 
    # само строит ссылку
     def get_absolute_url(self):

@@ -32,7 +32,7 @@
 
     </div>
     <div class="card-footer text-muted">
-        {{ item.created_at|date:"Y-m-d H:i:s" }}         <span >  Просмотров: {{ item.views}}  </span>
+        <p>Дата: {{ item.created_at|date:"d-m-Y H:i" }}      <span >  Просмотров: {{ item.views}}  </span></p>
     </div>
 </div>
 {% endfor %}
